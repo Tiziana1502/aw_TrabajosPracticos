@@ -10,7 +10,6 @@ Plataforma web e-commerce B2C orientada a la venta de paquetes turísticos combi
 
 * Agorio, Lautaro
 * Giovannetti, Juan Ignacio
-* Loza, Benjamín
 * Méndez, Benjamín
 * Rossi, Tiziana
 

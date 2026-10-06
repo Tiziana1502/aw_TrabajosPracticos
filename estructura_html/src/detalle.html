@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nomada Viajes - Detalle</title>
+    <link rel="icon" href="./recursos/imagenes/favicon.svg">
+    <link rel="stylesheet" href="./recursos/estilos/index-global.css">
+    <link rel="stylesheet" href="./recursos/estilos/detalle.css">
 </head>
+
 <body>
-    <header>
-       <a href="./index.html" aria-label="Ir al inicio">
+    <header class="encabezado-principal">
+        <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <nav>
+        <nav class="vinculos">
             <a href="./index.html">
                 Inicio
             </a>
@@ -20,17 +25,16 @@
             <a href="./detalle.html">
                 Detalle y Carrito
             </a>
-             <a href="./formulario.html">
+            <a href="./formulario.html">
                 Contacto
             </a>
-             <a href="./confirmacion.html">
+            <a href="./confirmacion.html">
                 Confirmacion
             </a>
         </nav>
     </header>
-    <main>
+    <main class="contenido-principal">
         <h1>Bariloche al completo</h1>
-
         <section>
             <ul>
                 <li>
@@ -40,8 +44,8 @@
                     Duración: 5 noches / 6 días
                 </li>
             </ul>
-
-            <img src="./recursos/imagenes/paquetes/bariloche.jpg" alt="Vista panorámica del lago Nahuel Huapi con cerros nevados de fondo, Bariloche" width="400">
+            <img src="./recursos/imagenes/paquetes/bariloche.webp"
+                alt="Vista panorámica del lago Nahuel Huapi con cerros nevados de fondo, Bariloche" width="400">
         </section>
 
         <section>
@@ -67,7 +71,6 @@
                 </li>
             </ul>
         </section>
-
         <section>
             <h2>Qué incluye</h2>
             <ul>
@@ -94,7 +97,6 @@
                 </li>
             </ul>
         </section>
-
         <section>
             <h2>Qué no incluye</h2>
             <ul>
@@ -108,19 +110,15 @@
                     Gastos personales
                 </li>
             </ul>
-
             <ul>
                 <li>
                     Precio final: $420.000 por persona
                 </li>
-                <li>
-                    <button type="button">
-                        Agregar al carrito
-                    </button>
-                </li>
+                <button type="button">
+                    Agregar al carrito
+                </button>
             </ul>
         </section>
-
         <section>
             <h2>Tu carrito</h2>
             <ul>
@@ -138,10 +136,10 @@
             </ul>
         </section>
     </main>
-    <footer>
+    <footer class="pie-principal">
         <ul>
             <li>
-                <a href="https:/instagram.com/@nomadaviajes_ok" target="_blank">
+                <a href="https://instagram.com/@nomadaviajes_ok" target="_blank">
                     @nomadaviajes_ok
                 </a>
             </li>
@@ -159,5 +157,11 @@
             </li>
         </ul>
     </footer>
+    <a href="https://wa.me/5493511234567" class="boton-flotante" aria-label="Escribirme por WhatsApp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3C6.48 3 2 6.94 2 11.5c0 2.34 1.16 4.44 3.06 5.94-.1.86-.42 2.02-1.31 3.2-.13.17-.02.42.2.42 1.9-.02 3.5-.9 4.4-1.55.83.2 1.72.3 2.65.3 5.52 0 10-3.94 10-8.31C21 6.94 16.52 3 12 3z"/>
+        </svg>
+     </a>
 </body>
+
 </html>

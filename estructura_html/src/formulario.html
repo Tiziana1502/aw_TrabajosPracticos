@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nómada Viajes - Contacto y Reserva</title>
+    <link rel="icon" href="./recursos/imagenes/favicon.svg">
+    <link rel="stylesheet" href="./recursos/estilos/index-global.css">
+    <link rel="stylesheet" href="./recursos/estilos/formulario.css">
 </head>
-<body>
 
-    <!-- Header -->
-    <header>
+<body>
+    <header class="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <nav>
+        <nav class="vinculos">
             <a href="./index.html">
                 Inicio
-            </a>  
+            </a>
             <a href="./catalogo.html">
                 Paquetes
             </a>
             <a href="./detalle.html">
                 Detalle y Carrito
-            </a> 
-             <a href="./formulario.html">
+            </a>
+            <a href="./formulario.html">
                 Contacto
-            </a> 
-             <a href="./confirmacion.html">
+            </a>
+            <a href="./confirmacion.html">
                 Confirmacion
-            </a>    
+            </a>
         </nav>
     </header>
-
-    <!-- Main Content -->
-    <main>
+    <main class="contenido-principal">
         <section class="formulario-reserva">
             <h2>Completá tus datos para reservar</h2>
-            
-            <form action="confirmacion.html" method="GET">
+
+            <form action="confirmacion.html" method="post">
                 <div>
                     <label for="nombre">Nombre y apellido:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre completo del pasajero" required>
                 </div>
-                
+
                 <div>
                     <label for="dni">DNI:</label>
                     <input type="text" id="dni" name="dni" placeholder="Documento de identidad" required>
                 </div>
-                
+
                 <div>
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="Dirección de email" required>
                 </div>
-                
+
                 <div>
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto" required>
                 </div>
-                
+
                 <div>
                     <label for="destino">Destino de interés:</label>
                     <input type="text" id="destino" name="destino" placeholder="Ej. Bariloche al completo">
                 </div>
-                
+
                 <div>
                     <label for="fecha">Fecha estimada de viaje:</label>
                     <input type="date" id="fecha" name="fecha">
                 </div>
-                
+
                 <div>
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Comentarios o consultas adicionales"></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="4"
+                        placeholder="Comentarios o consultas adicionales"></textarea>
                 </div>
-                
+
                 <button type="submit">Enviar consulta / Confirmar reserva</button>
             </form>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
+    </main>  
+    <footer class="pie-principal">
         <ul>
             <li>
-                <a href="https:/instagram.com/@nomadaviajes_ok" target="_blank">
+                <a href="https://instagram.com/@nomadaviajes_ok" target="_blank">
                     @nomadaviajes_ok
                 </a>
             </li>
             <li>
-                Contacto: Av. Colón 1234, Córdoba, Argentina  
+                Contacto: Av. Colón 1234, Córdoba, Argentina
             </li>
             <li>
                 Telefono: (0351) 456-7890
@@ -96,9 +96,15 @@
             </li>
             <li>
                 Preguntas frecuentes — Términos y condiciones — Medios de pago
-            </li>                   
+            </li>
         </ul>
-    </footer>
-
+    </footer >
+    <a href="https://wa.me/5493511234567" class="boton-flotante" aria-label="Escribirme por WhatsApp" target="_blank"
+        rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M12 3C6.48 3 2 6.94 2 11.5c0 2.34 1.16 4.44 3.06 5.94-.1.86-.42 2.02-1.31 3.2-.13.17-.02.42.2.42 1.9-.02 3.5-.9 4.4-1.55.83.2 1.72.3 2.65.3 5.52 0 10-3.94 10-8.31C21 6.94 16.52 3 12 3z" />
+        </svg>
+    </a>
 </body>
 </html>

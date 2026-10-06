@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nomada Viajes - Paquetes</title>
+    <link rel="icon" href="./recursos/imagenes/favicon.svg">
+    <link rel="stylesheet" href="./recursos/estilos/index-global.css">
+    <link rel="stylesheet" href="./recursos/estilos/catalogo.css">
 </head>
+
 <body>
-    <header>
-       <a href="./index.html" aria-label="Ir al inicio">
+    <header class="encabezado-principal">
+        <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <nav>
+        <nav class="vinculos">
             <a href="./index.html">
                 Inicio
-            </a>  
+            </a>
             <a href="./catalogo.html">
                 Paquetes
             </a>
             <a href="./detalle.html">
                 Detalle y Carrito
-            </a> 
-             <a href="./formulario.html">
+            </a>
+            <a href="./formulario.html">
                 Contacto
-            </a> 
-             <a href="./confirmacion.html">
+            </a>
+            <a href="./confirmacion.html">
                 Confirmacion
-            </a>    
+            </a>
         </nav>
     </header>
-    <main>
+    <main class="contenido-principal">
         <h1>Catalogo de Paquetes</h1>
-        <form action="./catalogo.html" method="get">     
-            <h3>Filtros</h3>       
+        <div class="contenedor-form">
+            <form action="./catalogo.html" method="post">
+                <h3>Filtros</h3>
                 <label for="id-destino">Destino</label>
                 <select name="destino" id="id-destino">
                     <option value="">Todos los destinos</option>
@@ -43,113 +49,118 @@
                     <option value="rio-de-janeiro">Río de Janeiro</option>
                     <option value="buenos-aires">Buenos Aires</option>
                 </select>
- 
+
                 <label for="id-fecha-desde">Fecha desde</label>
                 <input type="date" name="fecha-desde" id="id-fecha-desde">
- 
+
                 <label for="id-fecha-hasta">Fecha hasta</label>
                 <input type="date" name="fecha-hasta" id="id-fecha-hasta">
- 
+
                 <label for="id-precio-min">Precio mínimo</label>
                 <input type="number" name="precio-min" id="id-precio-min" min="0" step="1000" placeholder="$0">
- 
+
                 <label for="id-precio-max">Precio máximo</label>
                 <input type="number" name="precio-max" id="id-precio-max" min="0" step="1000" placeholder="$700.000">
- 
+
                 <legend>Tipo de viaje</legend>
 
-                    <label for="id-tipo-playa">
-                        <input type="checkbox" name="tipo-viaje" id="id-tipo-playa" value="playa">
-                        Playa
-                    </label>
- 
-                    <label for="id-tipo-aventura">
-                        <input type="checkbox" name="tipo-viaje" id="id-tipo-aventura" value="aventura">
-                        Aventura
-                    </label>
- 
-                    <label for="id-tipo-ciudad">
-                        <input type="checkbox" name="tipo-viaje" id="id-tipo-ciudad" value="ciudad">
-                        Ciudad
-                    </label>
- 
-                    <label for="id-tipo-naturaleza">
-                        <input type="checkbox" name="tipo-viaje" id="id-tipo-naturaleza" value="naturaleza">
-                        Naturaleza
-                    </label>        
-                <button type="submit">
-                    Filtrar
-                </button>       
-        </form>
+                <label for="id-tipo-playa">
+                    <input type="checkbox" name="tipo-viaje" id="id-tipo-playa" value="playa">
+                    Playa
+                </label>
+
+                <label for="id-tipo-aventura">
+                    <input type="checkbox" name="tipo-viaje" id="id-tipo-aventura" value="aventura">
+                    Aventura
+                </label>
+
+                <label for="id-tipo-ciudad">
+                    <input type="checkbox" name="tipo-viaje" id="id-tipo-ciudad" value="ciudad">
+                    Ciudad
+                </label>
+
+                <label for="id-tipo-naturaleza">
+                    <input type="checkbox" name="tipo-viaje" id="id-tipo-naturaleza" value="naturaleza">
+                    Naturaleza
+                </label>
+                <div>
+                    <button type="submit">
+                        Filtrar
+                    </button>
+                </div>
+            </form>
+        </div>
 
         <section>
-            <h2>Paquetes Disponibles</h2>     
-            <div>
+            <h2>Paquetes Disponibles</h2>
+            <div class="grilla-paquetes">
                 <article>
                     <h3>Bariloche al completo</h3>
-                    <img src="./recursos/imagenes/paquetes/bariloche.jpg" alt="Vista del lago Nahuel Huapi con cerros nevados, Bariloche" width="400">
-                
+                    <img src="./recursos/imagenes/paquetes/bariloche.webp"
+                        alt="Vista del lago Nahuel Huapi con cerros nevados, Bariloche" width="400">
+
                     <ul>
                         <li>
                             5 noches
                         </li>
                         <li>
                             $420.000 por persona
-                        </li>   
+                        </li>
                         <li>
                             <a href="./detalle.html">
                                 Ver paquete
                             </a>
-                        </li>                                             
+                        </li>
                     </ul>
-                </article>  
+                </article>
                 <article>
                     <h3>Cataratas + Selva Misionera</h3>
-                    <img src="./recursos/imagenes/paquetes/cataratas.jpg" alt="Cascada principal del Parque Nacional Iguazú" width="400">                
+                    <img src="./recursos/imagenes/paquetes/cataratas.webp"
+                        alt="Cascada principal del Parque Nacional Iguazú" width="400">
                     <ul>
                         <li>
                             4 noches
                         </li>
                         <li>
                             $360.000 por persona
-                        </li>   
+                        </li>
                         <li>
                             <a href="./detalle.html">
                                 Ver paquete
                             </a>
-                        </li>                                             
+                        </li>
                     </ul>
-                </article>  
+                </article>
                 <article>
                     <h3>Salta y sus paisajes</h3>
-                    <img src="./recursos/imagenes/paquetes/salta.jpg" alt="Cerros multicolores de la Quebrada de Humahuaca, Salta" width="400">                
+                    <img src="./recursos/imagenes/paquetes/salta.webp"
+                        alt="Cerros multicolores de la Quebrada de Humahuaca, Salta" width="400">
                     <ul>
                         <li>
                             6 noches
                         </li>
                         <li>
                             $395.000 por persona
-                        </li>   
+                        </li>
                         <li>
                             <a href="./detalle.html">
                                 Ver paquete
                             </a>
-                        </li>                                             
+                        </li>
                     </ul>
-                </article>  
-            </div>            
+                </article>
+            </div>
         </section>
-    
     </main>
-    <footer>
+    <footer class="pie-principal">
         <ul>
             <li>
-                <a href="https:/instagram.com/@nomadaviajes_ok" target="_blank">
+                <a href="https://instagram.com/@nomadaviajes_ok" target="_blank">
                     @nomadaviajes_ok
                 </a>
             </li>
             <li>
-                Contacto: Av. Colón 1234, Córdoba, Argentina  
+                Contacto: Av. Colón 1234, Córdoba, Argentina
             </li>
             <li>
                 Telefono: (0351) 456-7890
@@ -159,8 +170,16 @@
             </li>
             <li>
                 Preguntas frecuentes — Términos y condiciones — Medios de pago
-            </li>                   
+            </li>
         </ul>
     </footer>
+    <a href="https://wa.me/5493511234567" class="boton-flotante" aria-label="Escribirme por WhatsApp" target="_blank"
+        rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M12 3C6.48 3 2 6.94 2 11.5c0 2.34 1.16 4.44 3.06 5.94-.1.86-.42 2.02-1.31 3.2-.13.17-.02.42.2.42 1.9-.02 3.5-.9 4.4-1.55.83.2 1.72.3 2.65.3 5.52 0 10-3.94 10-8.31C21 6.94 16.52 3 12 3z" />
+        </svg>
+    </a>
 </body>
+
 </html>

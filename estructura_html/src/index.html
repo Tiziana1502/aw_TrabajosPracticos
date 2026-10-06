@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nomada Viajes</title>
+    <link rel="icon" href="./recursos/imagenes/favicon.svg">
+    <link rel="stylesheet" href="./recursos/estilos/index-global.css">
 </head>
 <body>
-    <header>
+    <header class="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <nav>
+        <nav class="vinculos">
             <a href="./index.html">
                 Inicio
             </a>  
@@ -28,57 +30,57 @@
             </a>    
         </nav>
     </header>
-    <main>
+    <main class="contenido-principal">
         <h1>"Tu próximo viaje empieza acá"</h1>
         <p>Encontrá, comparalo y reservalo en minutos, sin llamadas ni esperas.</p>   
-        <img src="./recursos/imagenes/fotoprincip.jpg" alt="Pareja de viajeros" width="300">  
+        <img src="./recursos/imagenes/fotoprincip.webp" alt="Pareja de viajeros" width="300">  
         <section>
             <h2>Destinos Destacados</h2>
-            <div>
+            <div class="grilla-destinos">
                 <article>
                     <h3>Bariloche — desde $420.000</h3>
-                    <img src="./recursos/imagenes/paquetes/bariloche.jpg" alt="Vista del lago Nahuel Huapi con cerros nevados, Bariloche" width="400">
+                    <img src="./recursos/imagenes/paquetes/bariloche.webp" alt="Vista del lago Nahuel Huapi con cerros nevados, Bariloche">
                 </article>
                  <article>
                     <h3>Cataratas del Iguazú — desde $360.000</h3>
-                    <img src="./recursos/imagenes/paquetes/cataratas.jpg" alt="Cascada principal del Parque Nacional Iguazú" width="400">
+                    <img src="./recursos/imagenes/paquetes/cataratas.webp" alt="Cascada principal del Parque Nacional Iguazú" width="400">
                 </article>
                 <article>
                     <h3>Salta y sus paisajes — desde $395.000</h3>
-                    <img src="./recursos/imagenes/paquetes/salta.jpg" alt="Cerros multicolores de la Quebrada de Humahuaca, Salta" width="400">
+                    <img src="./recursos/imagenes/paquetes/salta.webp" alt="Cerros multicolores de la Quebrada de Humahuaca, Salta" width="400">
                 </article>
                 <article>
-                    <h3>Río de Janeiro</strong> — desde $610.000</h3>
-                    <img src="./recursos/imagenes/paquetes/rio.jpg" alt="Vista del Cristo Redentor en Río de Janeiro" width="400">
+                    <h3>Río de Janeiro — desde $610.000</h3>
+                    <img src="./recursos/imagenes/paquetes/rio.webp" alt="Vista del Cristo Redentor en Río de Janeiro" width="400">
                 </article>
             </div>
         </section>
         <section>
             <h2>Ofertas Vigentes</h2>
-            <div>
+            <div class="grilla-ofertas">
                 <article>
                     <h3>Mendoza, Ruta del Vino — 20% OFF</h3>
                     <p>Antes $340.000, ahora $272.000</p>
-                    <img src="./recursos/imagenes/paquetes/mendoza.jpg" alt="Viñedos en la Ruta del Vino, Mendoza" width="400">
+                    <img src="./recursos/imagenes/paquetes/mendoza.webp" alt="Viñedos en la Ruta del Vino, Mendoza" width="400">
                 </article>
                 <article>
                     <h3>Florianópolis Total — 3 cuotas sin interés</h3>
                     <p> $580.000</p>
-                    <img src="./recursos/imagenes/paquetes/florianopolis.jpg" alt="Playa de Florianópolis, Brasil" width="400">
+                    <img src="./recursos/imagenes/paquetes/florianopolis.webp" alt="Playa de Florianópolis, Brasil" width="400">
                 </article>
                  <article>
                     <h3>Escapada a Buenos Aires — 15% OFF reservando esta semana</h3>
                     <p>Antes $150.000, ahora $127.500</p>
-                    <img src="./recursos/imagenes/paquetes/obelisco.jpg" alt="Avenida 9 de Julio y el Obelisco, Buenos Aires" width="400">
+                    <img src="./recursos/imagenes/paquetes/obelisco.webp" alt="Avenida 9 de Julio y el Obelisco, Buenos Aires" width="400">
                 </article>
                 
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="pie-principal">
         <ul>
             <li>
-                <a href="https:/instagram.com/@nomadaviajes_ok" target="_blank">
+                <a href="https://instagram.com/@nomadaviajes_ok" target="_blank">
                     @nomadaviajes_ok
                 </a>
             </li>
@@ -96,5 +98,12 @@
             </li>                   
         </ul>
     </footer>
+       <a href="https://wa.me/5493511234567" class="boton-flotante" aria-label="Escribirme por WhatsApp" target="_blank"
+        rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M12 3C6.48 3 2 6.94 2 11.5c0 2.34 1.16 4.44 3.06 5.94-.1.86-.42 2.02-1.31 3.2-.13.17-.02.42.2.42 1.9-.02 3.5-.9 4.4-1.55.83.2 1.72.3 2.65.3 5.52 0 10-3.94 10-8.31C21 6.94 16.52 3 12 3z" />
+        </svg>
+    </a>
 </body>
 </html>

@@ -224,3 +224,55 @@ nav{
 .boton-flotante:hover svg{
     fill: #1F2D2B;
 }
+
+/*Responsividad*/
+@media (max-width: 768px){
+    .encabezado-principal{
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 5px 1rem;
+    }
+
+    .encabezado-principal .vinculos{
+        justify-content: center;
+    }
+
+    .contenido-principal .presentacion img{
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        font-size: 1.6rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    /*En celular el encabezado deja de quedar fijo para no tapar el contenido*/
+    .encabezado-principal{
+        position: static;
+    }
+
+    .encabezado-principal a img{
+        width: 200px;
+    }
+
+    .contenido-principal{
+        padding: 0 1rem;
+    }
+
+    .pie-principal ul{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .boton-flotante{
+        bottom: 15px;
+        right: 15px;
+        width: 48px;
+        height: 48px;
+    }
+}

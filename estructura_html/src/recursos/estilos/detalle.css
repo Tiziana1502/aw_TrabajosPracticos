@@ -1,0 +1,156 @@
+
+/*SELECTORES DE CLASE */
+
+/*CONTENIDOS PRINCIPALES*/
+
+/*Galeria: datos del paquete a la izquierda y foto a la derecha*/
+.contenido-principal .galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-top: 4px solid #317F7A;
+    padding: 1rem;
+}
+
+.contenido-principal .galeria ul{
+    flex: 1 1 250px;
+}
+
+.contenido-principal .galeria ul li{
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #E3E0D8;
+    font-weight: 700;
+}
+
+.contenido-principal .galeria img{
+    flex: 2 1 350px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*Itinerario: cada dia es una tarjeta con borde a la izquierda*/
+.contenido-principal .itinerario ul li{
+    background-color: #FFFFFF;
+    border-left: 4px solid #317F7A;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Incluye y no incluye: tarjetas blancas como las de la grilla*/
+.contenido-principal .incluye,
+.contenido-principal .no-incluye,
+.contenido-principal .carrito{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-top: 4px solid #317F7A;
+    padding: 1rem;
+    margin-top: 2.5rem;
+}
+
+.contenido-principal .no-incluye{
+    border-top-color: #E07A5F;
+}
+
+.contenido-principal .carrito{
+    border-top-color: #F2B134;
+}
+
+/*Saca el margen de arriba del h2 porque la tarjeta ya tiene margen*/
+.contenido-principal .incluye h2,
+.contenido-principal .no-incluye h2,
+.contenido-principal .carrito h2{
+    margin-top: 0;
+}
+
+.contenido-principal .incluye ul li,
+.contenido-principal .no-incluye ul li,
+.contenido-principal .carrito ul li{
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #E3E0D8;
+}
+
+/*La ultima lista de no incluye tiene el precio final y el boton*/
+.contenido-principal .no-incluye ul:last-child{
+    margin-top: 1.5rem;
+}
+
+.contenido-principal .no-incluye ul:last-child li{
+    border-bottom: none;
+    color: #de8c3b;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.contenido-principal .no-incluye button{
+    margin-top: 0.5rem;
+    background-color: #0F6B66;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contenido-principal .no-incluye button:hover{
+    background-color: #E07A5F;
+    color: #1F2D2B;
+}
+
+/*Carrito: el ultimo item es el vinculo "Continuar"*/
+.contenido-principal .carrito ul li:last-child{
+    border-bottom: none;
+    padding-top: 1rem;
+}
+
+.contenido-principal .carrito ul li a{
+    display: inline-block;
+    background-color: #F2B134;
+    color: #1F2D2B;
+    font-weight: 700;
+    padding: 0.7rem 2rem;
+    border-radius: 4px;
+}
+
+.contenido-principal .carrito ul li a:hover{
+    background-color: #E07A5F;
+}
+
+/*Responsividad*/
+@media (max-width: 768px){
+    .contenido-principal .galeria{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contenido-principal .galeria ul,
+    .contenido-principal .galeria img{
+        flex: none;
+    }
+
+    .contenido-principal .galeria img{
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px){
+    .contenido-principal .galeria img{
+        height: 180px;
+    }
+
+    /*En celular el boton y el vinculo ocupan todo el ancho*/
+    .contenido-principal .no-incluye button,
+    .contenido-principal .carrito ul li a{
+        width: 100%;
+        text-align: center;
+    }
+}

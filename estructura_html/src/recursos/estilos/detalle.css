@@ -16,10 +16,6 @@
     padding: 1rem;
 }
 
-.contenido-principal .galeria ul{
-    flex: 1 1 250px;
-}
-
 .contenido-principal .galeria ul li{
     padding: 0.4rem 0;
     border-bottom: 1px solid #E3E0D8;
@@ -34,7 +30,7 @@
     border-radius: 8px;
 }
 
-/*Itinerario: cada dia es una tarjeta con borde a la izquierda*/
+/*Itinerario*/
 .contenido-principal .itinerario ul li{
     background-color: #FFFFFF;
     border-left: 4px solid #317F7A;
@@ -43,7 +39,6 @@
     margin-bottom: 0.5rem;
 }
 
-/*Incluye y no incluye: tarjetas blancas como las de la grilla*/
 .contenido-principal .incluye,
 .contenido-principal .no-incluye,
 .contenido-principal .carrito{
@@ -62,7 +57,6 @@
     border-top-color: #F2B134;
 }
 
-/*Saca el margen de arriba del h2 porque la tarjeta ya tiene margen*/
 .contenido-principal .incluye h2,
 .contenido-principal .no-incluye h2,
 .contenido-principal .carrito h2{
@@ -106,7 +100,6 @@
     color: #1F2D2B;
 }
 
-/*Carrito: el ultimo item es el vinculo "Continuar"*/
 .contenido-principal .carrito ul li:last-child{
     border-bottom: none;
     padding-top: 1rem;

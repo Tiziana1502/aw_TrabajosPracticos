@@ -76,4 +76,26 @@
 }
 
 /*Responsividad*/
-/*Lo completa Lautaro*/
+@media (max-width: 768px){
+    .contenido-principal .contenedor-form{
+        padding: 1.25rem 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    /*En celular la tarjeta ocupa todo el ancho y tiene menos relleno*/
+    .contenido-principal .contenedor-form{
+        padding: 1rem 0.75rem;
+    }
+
+    /*En celular el boton ocupa todo el ancho*/
+    .contenido-principal .contenedor-form button{
+        width: 100%;
+        padding: 0.7rem 1rem;
+    }
+
+    .boton-flotante img{
+        width: 26px;
+        height: 26px;
+    }
+}

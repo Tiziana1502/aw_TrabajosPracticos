@@ -34,3 +34,27 @@
 }
 
 /*Responsividad*/
+@media (max-width: 768px){
+    .contenido-principal .confirmacion-reserva{
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px){
+    /*En celular el texto se alinea a la izquierda para leerse mejor*/
+    .contenido-principal .confirmacion-reserva{
+        text-align: left;
+        padding: 1.25rem 0.75rem;
+    }
+
+    /*En celular el vinculo "Volver al inicio" ocupa todo el ancho*/
+    .contenido-principal .confirmacion-reserva a{
+        display: block;
+        text-align: center;
+    }
+
+    .boton-flotante img{
+        width: 26px;
+        height: 26px;
+    }
+}

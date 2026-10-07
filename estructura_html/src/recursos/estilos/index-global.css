@@ -1,13 +1,15 @@
 
 /*IMPORTAR FUENTE*/
 @font-face {
-  font-family: "Poppins";
-  src: url(./fuentes/Poppins-Bold.ttf), 
-}
-@font-face {
-  font-family: "Poppins";
-  src: url(./fuentes/Poppins-Regular.ttf), 
-}
+     font-family: "Poppins";
+     src: url(./fuentes/Poppins-Regular.ttf);
+     font-weight: 400;
+   }
+   @font-face {
+     font-family: "Poppins";
+     src: url(./fuentes/Poppins-Bold.ttf);
+     font-weight: 700;
+   }
 
 /*SELECTOR UNIVERSAL*/
 *,
@@ -212,7 +214,7 @@ nav{
 }
 
 .boton-flotante:hover{
-    background-color: #E07A5F;
+    background-color: #ee9b49;
 }
 
 .boton-flotante svg{

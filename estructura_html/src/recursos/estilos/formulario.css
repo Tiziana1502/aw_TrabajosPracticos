@@ -65,7 +65,7 @@
 }
 
 .contenido-principal .contenedor-form button:hover{
-    background-color: #E07A5F;
+    background-color: #ee9b49;
     color: #1F2D2B;
 }
 
@@ -86,10 +86,5 @@
     .contenido-principal .contenedor-form button{
         width: 100%;
         padding: 0.7rem 1rem;
-    }
-
-    .boton-flotante img{
-        width: 26px;
-        height: 26px;
-    }
+    }   
 }

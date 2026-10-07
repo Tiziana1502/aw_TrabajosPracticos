@@ -29,7 +29,7 @@
 }
 
 .contenido-principal .confirmacion-reserva a:hover{
-    background-color: #E07A5F;
+    background-color: #ee9b49;
     color: #1F2D2B;
 }
 
@@ -51,10 +51,5 @@
     .contenido-principal .confirmacion-reserva a{
         display: block;
         text-align: center;
-    }
-
-    .boton-flotante img{
-        width: 26px;
-        height: 26px;
-    }
+    }   
 }

@@ -1,0 +1,73 @@
+/*SELECTORES DE CLASE */
+
+/*CONTENIDOS PRINCIPALES*/
+
+/*Tarjeta blanca que envuelve al formulario de reserva*/
+.contenido-principal .contenedor-form{
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-top: 4px solid #317F7A;
+    padding: 1.5rem;
+}
+
+.contenido-principal .contenedor-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*Cada par label + campo va dentro de un div*/
+.contenido-principal .contenedor-form form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contenido-principal .contenedor-form form label{
+    font-weight: 700;
+    color: #0F6B66;
+}
+
+.contenido-principal .contenedor-form form input,
+.contenido-principal .contenedor-form form textarea{
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+}
+
+.contenido-principal .contenedor-form form textarea{
+    resize: vertical;
+}
+
+/*Muestra en otro color el campo que se está seleccionando*/
+.contenido-principal .contenedor-form form input:focus,
+.contenido-principal .contenedor-form form textarea:focus{
+    outline: 2px solid #0F6B66;
+    border-color: #0F6B66;
+}
+
+.contenido-principal .contenedor-form button{
+    margin-top: 0.5rem;
+    background-color: #0F6B66;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contenido-principal .contenedor-form button:hover{
+    background-color: #E07A5F;
+    color: #1F2D2B;
+}
+
+/*Responsividad*/
+/*Lo completa Lautaro*/

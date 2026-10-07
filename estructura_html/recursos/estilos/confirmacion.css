@@ -1,0 +1,37 @@
+/*SELECTORES DE CLASE */
+
+/*CONTENIDOS PRINCIPALES*/
+
+/*Tarjeta de confirmación centrada*/
+.contenido-principal .confirmacion-reserva{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-top: 4px solid #317F7A;
+    padding: 2rem 1.5rem;
+}
+
+.contenido-principal .confirmacion-reserva p strong{
+    color: #B5492D;
+}
+
+/*El vínculo "Volver al inicio" se ve como botón*/
+.contenido-principal .confirmacion-reserva a{
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #0F6B66;
+    color: #FFFFFF;
+    padding: 0.7rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.contenido-principal .confirmacion-reserva a:hover{
+    background-color: #E07A5F;
+    color: #1F2D2B;
+}
+
+/*Responsividad*/
+/*Lo completa Lautaro*/

@@ -8,16 +8,17 @@
     <link rel="icon" href="./recursos/imagenes/favicon.svg">
     <link rel="stylesheet" href="./recursos/estilos/index-global.css">
     <link rel="stylesheet" href="./recursos/estilos/formulario.css">
+    <script type="module" src="./recursos/js/index.js"></script>
 </head>
 
 <body>
-    <header class="encabezado-principal">
+    <header class="encabezado-principal" id="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <button class="boton-abrir" aria-label="Abrir menú"></button>
+        <button class="boton-abrir" id="boton-abrir" aria-label="Abrir menú" aria-expanded="false"></button>
+        <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar menú"></button>
         <nav class="vinculos">
-            <button class="boton-cerrar" aria-label="Cerrar menú"></button>
             <a href="./index.html">
                 Inicio
             </a>
@@ -37,10 +38,9 @@
     </header>
     <main class="contenido-principal">
         <section>
-            <h2>Completá tus datos para reservar</h2>
-
+            <h1>Completá tus datos para reservar</h1>
             <div class="contenedor-form">
-                <form action="confirmacion.html" method="post">
+                <form action="confirmacion.html" method="post" id="form-reserva">
                     <div>
                         <label for="nombre">Nombre y apellido:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre completo del pasajero"
@@ -110,6 +110,7 @@
             <path
                 d="M12 3C6.48 3 2 6.94 2 11.5c0 2.34 1.16 4.44 3.06 5.94-.1.86-.42 2.02-1.31 3.2-.13.17-.02.42.2.42 1.9-.02 3.5-.9 4.4-1.55.83.2 1.72.3 2.65.3 5.52 0 10-3.94 10-8.31C21 6.94 16.52 3 12 3z" />
         </svg>
+    </a>
 </body>
 
 </html>

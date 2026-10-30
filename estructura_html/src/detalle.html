@@ -8,16 +8,17 @@
     <link rel="icon" href="./recursos/imagenes/favicon.svg">
     <link rel="stylesheet" href="./recursos/estilos/index-global.css">
     <link rel="stylesheet" href="./recursos/estilos/detalle.css">
+    <script type="module" src="./recursos/js/index.js"></script>
 </head>
 
 <body>
-    <header class="encabezado-principal">
+    <header class="encabezado-principal" id="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <button class="boton-abrir" aria-label="Abrir menú"></button>
-        <nav class="vinculos">
-            <button class="boton-cerrar" aria-label="Cerrar menú"></button>
+        <button class="boton-abrir" id="boton-abrir" aria-label="Abrir menú" aria-expanded="false"></button>
+        <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar menú"></button>
+        <nav class="vinculos">          
             <a href="./index.html">
                 Inicio
             </a>
@@ -36,94 +37,96 @@
         </nav>
     </header>
     <main class="contenido-principal">
-        <h1>Bariloche al completo</h1>
-        <section class="galeria">
-            <ul>
-                <li>
-                    Destino: San Carlos de Bariloche, Río Negro
-                </li>
-                <li>
-                    Duración: 5 noches / 6 días
-                </li>
-            </ul>
-            <img src="./recursos/imagenes/paquetes/bariloche.webp"
-                alt="Vista panorámica del lago Nahuel Huapi con cerros nevados de fondo, Bariloche" width="400">
-        </section>
+        <div id="contenedor-detalle">
+            <h1>Bariloche al completo</h1>
+            <section class="galeria">
+                <ul>
+                    <li>
+                        Destino: San Carlos de Bariloche, Río Negro
+                    </li>
+                    <li>
+                        Duración: 5 noches / 6 días
+                    </li>
+                </ul>
+                <img src="./recursos/imagenes/paquetes/bariloche.webp"
+                    alt="Vista panorámica del lago Nahuel Huapi con cerros nevados de fondo, Bariloche" width="400">
+            </section>
 
-        <section class="itinerario">
-            <h2>Descripción del itinerario</h2>
-            <ul>
-                <li>
-                    Día 1: Llegada a Bariloche y traslado al hotel. Tarde libre para recorrer el centro cívico.
-                </li>
-                <li>
-                    Día 2: Excursión a Circuito Chico, con parada en Cerro Campanario y Villa La Angostura.
-                </li>
-                <li>
-                    Día 3: Día libre para actividades opcionales (rafting, trekking o city tour).
-                </li>
-                <li>
-                    Día 4: Excursión a Isla Victoria y Bosque de Arrayanes en el Parque Nacional Nahuel Huapi.
-                </li>
-                <li>
-                    Día 5: Mañana libre, tarde de compras en el centro. Chocolate artesanal incluido.
-                </li>
-                <li>
-                    Día 6: Desayuno y traslado al aeropuerto.
-                </li>
-            </ul>
-        </section>
-        <section class="incluye">
-            <h2>Qué incluye</h2>
-            <ul>
-                <li>
-                    Vuelos ida y vuelta desde Córdoba
-                </li>
-                <li>
-                    5 noches de alojamiento con desayuno en hotel 3 estrellas
-                </li>
-                <li>
-                    Traslados aeropuerto–hotel–aeropuerto
-                </li>
-                <li>
-                    Excursión a Circuito Chico
-                </li>
-                <li>
-                    Excursión a Isla Victoria y Bosque de Arrayanes
-                </li>
-                <li>
-                    Degustación de chocolate artesanal
-                </li>
-                <li>
-                    Asistencia al viajero
-                </li>
-            </ul>
-        </section>
-        <section class="no-incluye">
-            <h2>Qué no incluye</h2>
-            <ul>
-                <li>
-                    Almuerzos y cenas no especificados
-                </li>
-                <li>
-                    Actividades opcionales (rafting, trekking, city tour)
-                </li>
-                <li>
-                    Gastos personales
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    Precio final: $420.000 por persona
-                </li>
-                <li>
-                    <button type="button">
-                        Agregar al carrito
-                    </button>
-                </li>
-            </ul>
-        </section>
-        <section class="carrito">
+            <section class="itinerario">
+                <h2>Descripción del itinerario</h2>
+                <ul>
+                    <li>
+                        Día 1: Llegada a Bariloche y traslado al hotel. Tarde libre para recorrer el centro cívico.
+                    </li>
+                    <li>
+                        Día 2: Excursión a Circuito Chico, con parada en Cerro Campanario y Villa La Angostura.
+                    </li>
+                    <li>
+                        Día 3: Día libre para actividades opcionales (rafting, trekking o city tour).
+                    </li>
+                    <li>
+                        Día 4: Excursión a Isla Victoria y Bosque de Arrayanes en el Parque Nacional Nahuel Huapi.
+                    </li>
+                    <li>
+                        Día 5: Mañana libre, tarde de compras en el centro. Chocolate artesanal incluido.
+                    </li>
+                    <li>
+                        Día 6: Desayuno y traslado al aeropuerto.
+                    </li>
+                </ul>
+            </section>
+            <section class="incluye">
+                <h2>Qué incluye</h2>
+                <ul>
+                    <li>
+                        Vuelos ida y vuelta desde Córdoba
+                    </li>
+                    <li>
+                        5 noches de alojamiento con desayuno en hotel 3 estrellas
+                    </li>
+                    <li>
+                        Traslados aeropuerto – hotel – aeropuerto
+                    </li>
+                    <li>
+                        Excursión a Circuito Chico
+                    </li>
+                    <li>
+                        Excursión a Isla Victoria y Bosque de Arrayanes
+                    </li>
+                    <li>
+                        Degustación de chocolate artesanal
+                    </li>
+                    <li>
+                        Asistencia al viajero
+                    </li>
+                </ul>
+            </section>
+            <section class="no-incluye">
+                <h2>Qué no incluye</h2>
+                <ul>
+                    <li>
+                        Almuerzos y cenas no especificados
+                    </li>
+                    <li>
+                        Actividades opcionales (rafting, trekking, city tour)
+                    </li>
+                    <li>
+                        Gastos personales
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Precio final: $420.000 por persona
+                    </li>
+                    <li>
+                        <button type="button">
+                            Agregar al carrito
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="carrito" id="contenedor-carrito">
             <h2>Tu carrito</h2>
             <ul>
                 <li>
@@ -169,5 +172,4 @@
         </svg>
     </a>
 </body>
-
 </html>

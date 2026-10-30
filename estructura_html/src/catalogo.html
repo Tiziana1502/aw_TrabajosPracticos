@@ -8,16 +8,17 @@
     <link rel="icon" href="./recursos/imagenes/favicon.svg">
     <link rel="stylesheet" href="./recursos/estilos/index-global.css">
     <link rel="stylesheet" href="./recursos/estilos/catalogo.css">
+    <script type="module" src="./recursos/js/index.js"></script>
 </head>
 
 <body>
-    <header class="encabezado-principal">
+    <header class="encabezado-principal" id="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <button class="boton-abrir" aria-label="Abrir menú"></button>
+        <button class="boton-abrir" id="boton-abrir" aria-label="Abrir menú" aria-expanded="false"></button>
+        <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar menú"></button>
         <nav class="vinculos">
-            <button class="boton-cerrar" aria-label="Cerrar menú"></button>
             <a href="./index.html">
                 Inicio
             </a>
@@ -38,65 +39,68 @@
     <main class="contenido-principal">
         <h1>Catalogo de Paquetes</h1>
         <div class="contenedor-form">
-            <form action="./catalogo.html" method="post">
+            <form id="form-filtros" action="./catalogo.html" method="post">
                 <h3>Filtros</h3>
-                <label for="id-destino">Destino</label>
-                <select name="destino" id="id-destino">
-                    <option value="">Todos los destinos</option>
-                    <option value="bariloche">Bariloche</option>
-                    <option value="cataratas">Cataratas del Iguazú</option>
-                    <option value="salta">Salta</option>
-                    <option value="mendoza">Mendoza</option>
-                    <option value="florianopolis">Florianópolis</option>
-                    <option value="rio-de-janeiro">Río de Janeiro</option>
-                    <option value="buenos-aires">Buenos Aires</option>
-                </select>
-
-                <label for="id-fecha-desde">Fecha desde</label>
-                <input type="date" name="fecha-desde" id="id-fecha-desde">
-
-                <label for="id-fecha-hasta">Fecha hasta</label>
-                <input type="date" name="fecha-hasta" id="id-fecha-hasta">
-
-                <label for="id-precio-min">Precio mínimo</label>
-                <input type="number" name="precio-min" id="id-precio-min" min="0" step="1000" placeholder="$0">
-
-                <label for="id-precio-max">Precio máximo</label>
-                <input type="number" name="precio-max" id="id-precio-max" min="0" step="1000" placeholder="$700.000">
-
-                <legend>Tipo de viaje</legend>
-
-                <label for="id-tipo-playa">
-                    <input type="checkbox" name="tipo-viaje" id="id-tipo-playa" value="playa">
-                    Playa
-                </label>
-
-                <label for="id-tipo-aventura">
-                    <input type="checkbox" name="tipo-viaje" id="id-tipo-aventura" value="aventura">
-                    Aventura
-                </label>
-
-                <label for="id-tipo-ciudad">
-                    <input type="checkbox" name="tipo-viaje" id="id-tipo-ciudad" value="ciudad">
-                    Ciudad
-                </label>
-
-                <label for="id-tipo-naturaleza">
-                    <input type="checkbox" name="tipo-viaje" id="id-tipo-naturaleza" value="naturaleza">
-                    Naturaleza
-                </label>
-                <div>
-                    <button type="submit">
-                        Filtrar
-                    </button>
+                <div class="campo-completo">
+                    <label for="id-destino">Destino</label>
+                    <select name="destino" id="id-destino">
+                        <option value="">Todos los destinos</option>
+                        <option value="bariloche">Bariloche</option>
+                        <option value="cataratas">Cataratas del Iguazú</option>
+                        <option value="salta">Salta</option>
+                        <option value="mendoza">Mendoza</option>
+                        <option value="florianopolis">Florianópolis</option>
+                        <option value="rio-de-janeiro">Río de Janeiro</option>
+                        <option value="buenos-aires">Buenos Aires</option>
+                    </select>
                 </div>
+                <div>
+                    <label for="id-fecha-desde">Fecha desde</label>
+                    <input type="date" name="fecha-desde" id="id-fecha-desde">
+                </div>
+                <div>
+                    <label for="id-fecha-hasta">Fecha hasta</label>
+                    <input type="date" name="fecha-hasta" id="id-fecha-hasta">
+                </div>
+                <div>
+                    <label for="id-precio-min">Precio mínimo</label>
+                    <input type="number" name="precio-min" id="id-precio-min" min="0" step="1000" placeholder="$0">
+                </div>
+                <div>
+                    <label for="id-precio-max">Precio máximo</label>
+                    <input type="number" name="precio-max" id="id-precio-max" min="0" step="1000"
+                        placeholder="$700.000">
+                </div>
+                <fieldset class="campo-completo">
+                    <legend>Tipo de viaje</legend>
+                    <div class="opciones-tipo">
+                        <label for="id-tipo-playa">
+                            <input type="checkbox" name="tipo-viaje" id="id-tipo-playa" value="playa">
+                            Playa
+                        </label>
+                        <label for="id-tipo-aventura">
+                            <input type="checkbox" name="tipo-viaje" id="id-tipo-aventura" value="aventura">
+                            Aventura
+                        </label>
+                        <label for="id-tipo-ciudad">
+                            <input type="checkbox" name="tipo-viaje" id="id-tipo-ciudad" value="ciudad">
+                            Ciudad
+                        </label>
+                        <label for="id-tipo-naturaleza">
+                            <input type="checkbox" name="tipo-viaje" id="id-tipo-naturaleza" value="naturaleza">
+                            Naturaleza
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit">Filtrar</button>
             </form>
         </div>
 
         <section>
             <h2>Paquetes Disponibles</h2>
-            <div class="grilla-paquetes">
-                <article>
+            <div class="grilla-paquetes" id="contenedor-paquetes">
+                <!-- Los paquetes se cargan dinámicamente mediante JavaScript en el archivo index.js.
+                 <article>
                     <h3>Bariloche al completo</h3>
                     <img src="./recursos/imagenes/paquetes/bariloche.webp"
                         alt="Vista del lago Nahuel Huapi con cerros nevados, Bariloche" width="400">
@@ -151,6 +155,7 @@
                         </li>
                     </ul>
                 </article>
+                -->
             </div>
         </section>
     </main>

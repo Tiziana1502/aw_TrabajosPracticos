@@ -34,12 +34,6 @@
 }
 
 /*Responsividad*/
-@media (max-width: 768px){
-    .contenido-principal .confirmacion-reserva{
-        padding: 1.5rem 1rem;
-    }
-}
-
 @media (max-width: 480px){
     /*En celular el texto se alinea a la izquierda para leerse mejor*/
     .contenido-principal .confirmacion-reserva{

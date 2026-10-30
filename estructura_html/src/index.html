@@ -7,16 +7,17 @@
     <title>Nomada Viajes</title>
     <link rel="icon" href="./recursos/imagenes/favicon.svg">
     <link rel="stylesheet" href="./recursos/estilos/index-global.css">
+    <script type="module" src="./recursos/js/index.js"></script>
 </head>
 
 <body>
-    <header class="encabezado-principal">
+    <header class="encabezado-principal" id="encabezado-principal">
         <a href="./index.html" aria-label="Ir al inicio">
             <img src="./recursos/imagenes/logo_nomada.png" alt="logo empresa Nómada Viajes" width="450">
         </a>
-        <button class="boton-abrir" aria-label="Abrir menú"></button>
-        <nav class="vinculos">
-            <button class="boton-cerrar" aria-label="Cerrar menú"></button>
+        <button class="boton-abrir" id="boton-abrir" aria-label="Abrir menú" aria-expanded="false"></button>
+        <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar menú"></button>
+        <nav class="vinculos">          
             <a href="./index.html">
                 Inicio
             </a>
@@ -33,14 +34,14 @@
                 Confirmacion
             </a>
         </nav>
-    </header>
+    </header>    
     <main class="contenido-principal">
         <h1>"Tu próximo viaje empieza acá"</h1>
         <p>Encontrá, comparalo y reservalo en minutos, sin llamadas ni esperas.</p>
         <img src="./recursos/imagenes/fotoprincip.webp" alt="Pareja de viajeros" width="300">
         <section>
             <h2>Destinos Destacados</h2>
-            <div class="grilla-destinos">
+            <div class="grilla-destinos" id="contenedor-destinos">
                 <article>
                     <h3>Bariloche — desde $420.000</h3>
                     <img src="./recursos/imagenes/paquetes/bariloche.webp"
@@ -65,7 +66,7 @@
         </section>
         <section>
             <h2>Ofertas Vigentes</h2>
-            <div class="grilla-ofertas">
+            <div class="grilla-ofertas" id="contenedor-ofertas">
                 <article>
                     <h3>Mendoza, Ruta del Vino — 20% OFF</h3>
                     <p>Antes $340.000, ahora $272.000</p>

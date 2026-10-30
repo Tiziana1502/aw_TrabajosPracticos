@@ -69,6 +69,18 @@
     color: #1F2D2B;
 }
 
+/*Mensajes de error de la validacion (los crea formulario.js)*/
+.contenido-principal .contenedor-form form .mensaje-error{
+    color: #B5492D;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.contenido-principal .contenedor-form form input[aria-invalid="true"],
+.contenido-principal .contenedor-form form textarea[aria-invalid="true"]{
+    border-color: #B5492D;
+}
+
 /*Responsividad*/
 @media (max-width: 480px){
     /*En celular la tarjeta ocupa todo el ancho y tiene menos relleno*/

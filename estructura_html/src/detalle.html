@@ -18,7 +18,7 @@
         </a>
         <button class="boton-abrir" id="boton-abrir" aria-label="Abrir menú" aria-expanded="false"></button>
         <button class="boton-cerrar" id="boton-cerrar" aria-label="Cerrar menú"></button>
-        <nav class="vinculos">          
+        <nav class="vinculos">
             <a href="./index.html">
                 Inicio
             </a>
@@ -46,6 +46,12 @@
                     </li>
                     <li>
                         Duración: 5 noches / 6 días
+                    </li>
+                    <li>
+                        Fecha de salida: 10/12/2026
+                    </li>
+                    <li>
+                        Tipo de viaje: Aventura
                     </li>
                 </ul>
                 <img src="./recursos/imagenes/paquetes/bariloche.webp"
@@ -114,33 +120,44 @@
                         Gastos personales
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        Precio final: $420.000 por persona
-                    </li>
-                    <li>
-                        <button type="button">
-                            Agregar al carrito
-                        </button>
-                    </li>
-                </ul>
+            </section>
+            <section class="reserva">
+                <h2>Reservá tu lugar</h2>
+                <p class="precio-final">
+                    $420.000 <span>por persona</span>
+                </p>
+                <div class="campo-personas">
+                    <label for="id-personas">Cantidad de personas</label>
+                    <input type="number" name="personas" id="id-personas" min="1" max="10" value="2">
+                </div>
+                <button type="button" id="boton-agregar">
+                    Agregar al carrito
+                </button>
             </section>
         </div>
         <section class="carrito" id="contenedor-carrito">
             <h2>Tu carrito</h2>
-            <ul>
-                <li>
-                    Bariloche al completo — 2 personas — $840.000
-                </li>
-                <li>
-                    Subtotal: $840.000
-                </li>
-                <li>
-                    <a href="./formulario.html">
-                        Continuar
-                    </a>
+            <ul class="carrito-items">
+                <li class="carrito-item">
+                    <img src="./recursos/imagenes/paquetes/bariloche.webp"
+                        alt="Lago Nahuel Huapi con cerros nevados, Bariloche" width="80">
+                    <div class="carrito-datos">
+                        <h3>Bariloche al completo</h3>
+                        <p>2 personas × $420.000</p>
+                    </div>
+                    <p class="carrito-precio">$840.000</p>
+                    <button type="button" class="boton-quitar">
+                        Quitar
+                    </button>
                 </li>
             </ul>
+            <p class="carrito-vacio" hidden>Tu carrito está vacío.</p>
+            <div class="carrito-total">
+                <p>Subtotal: <strong>$840.000</strong></p>
+                <a href="./formulario.html">
+                    Continuar con la reserva
+                </a>
+            </div>
         </section>
     </main>
     <footer class="pie-principal">

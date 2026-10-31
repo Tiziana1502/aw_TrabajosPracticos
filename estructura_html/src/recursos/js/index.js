@@ -11,6 +11,7 @@ const botonCerrar = document.getElementById("boton-cerrar")
 const contenedorPaquetes = document.getElementById("contenedor-paquetes")
 const formFiltros = document.getElementById("form-filtros")
 const formReserva = document.getElementById("form-reserva")
+const botonAgregar = document.getElementById("boton-agregar")
 
 // Condicional para activar el MENÚ HAMBURGUESA 
 if (encabezado && botonAbrir && botonCerrar) {
@@ -43,4 +44,12 @@ if (contenedorPaquetes && formFiltros) {
 // FORMULARIO DE RESERVA (solo existe en formulario.html)
 if (formReserva) {
     iniciarFormulario(formReserva)
+}
+
+// DETALLE: botón "Agregar al carrito" (solo existe en detalle.html)
+if (botonAgregar) {
+    // Escuchador: al hacer clic se avisa por consola
+    botonAgregar.addEventListener('click', (evento) => {
+        console.log("Se ha agregado al carrito")
+    })
 }

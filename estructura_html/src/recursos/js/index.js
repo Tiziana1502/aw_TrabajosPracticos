@@ -1,7 +1,8 @@
 //Siempre los import van arriba de todo
-import paquetes from "./paquetes.js" //no nombrada
-import { renderizarPaquetes, iniciarCatalogo } from "./catalogo.js" //nombrada
-import { iniciarFormulario } from "./formulario.js" 
+import { obtenerPaquetes } from "./datos.js" //nombrada
+import { iniciarCatalogo } from "./catalogo.js" //nombrada
+import { iniciarFormulario } from "./formulario.js"
+import { iniciarDetalle } from "./detalle.js" //nombrada
 
 // Referenciamos elementos del DOM a partir de su ID
 // Los 5 HTML cargan este archivo, por eso cada elemento se usa solo si existe en la página abierta
@@ -11,7 +12,7 @@ const botonCerrar = document.getElementById("boton-cerrar")
 const contenedorPaquetes = document.getElementById("contenedor-paquetes")
 const formFiltros = document.getElementById("form-filtros")
 const formReserva = document.getElementById("form-reserva")
-const botonAgregar = document.getElementById("boton-agregar")
+const contenedorDetalle = document.getElementById("contenedor-detalle")
 
 // Condicional para activar el MENÚ HAMBURGUESA 
 if (encabezado && botonAbrir && botonCerrar) {
@@ -38,7 +39,13 @@ if (encabezado && botonAbrir && botonCerrar) {
 
 // CATÁLOGO (solo existe en catalogo.html)
 if (contenedorPaquetes && formFiltros) {
-    iniciarCatalogo(contenedorPaquetes, formFiltros, paquetes)
+    const paquetes = await obtenerPaquetes()
+
+    if (paquetes) {
+        iniciarCatalogo(contenedorPaquetes, formFiltros, paquetes)
+    } else {
+        contenedorPaquetes.innerHTML = '<p>No se pudieron cargar los paquetes. Intentá de nuevo más tarde.</p>'
+    }
 }
 
 // FORMULARIO DE RESERVA (solo existe en formulario.html)
@@ -46,10 +53,22 @@ if (formReserva) {
     iniciarFormulario(formReserva)
 }
 
-// DETALLE: botón "Agregar al carrito" (solo existe en detalle.html)
-if (botonAgregar) {
-    // Escuchador: al hacer clic se avisa por consola
-    botonAgregar.addEventListener('click', (evento) => {
-        console.log("Se ha agregado al carrito")
-    })
+// DETALLE (solo existe en detalle.html)
+if (contenedorDetalle) {
+    const paquetes = await obtenerPaquetes()
+
+    if (paquetes) {
+        const paquete = iniciarDetalle(contenedorDetalle, paquetes)
+
+        // El botón se busca DESPUÉS de dibujar el detalle, porque lo crea detalle.js
+        const botonAgregar = document.getElementById("boton-agregar")
+        if (paquete && botonAgregar) {
+            // Escuchador: por ahora avisa por consola (en el paso siguiente se guarda en localStorage)
+            botonAgregar.addEventListener('click', (evento) => {
+                console.log("Se ha agregado al carrito:", paquete.nombre)
+            })
+        }
+    } else {
+        contenedorDetalle.innerHTML = '<p>No se pudo cargar el paquete. Intentá de nuevo más tarde.</p>'
+    }
 }
